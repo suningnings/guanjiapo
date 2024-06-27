@@ -29,6 +29,7 @@ public abstract class AbstractMainFrame extends JFrame {
     private JLabel titleLabel = new JLabel(new ImageIcon("gjp.jpg"));//标题
     private JButton ledgerBtn = new JButton("账务管理");//账务管理
     private JButton sortBtn = new JButton("分类管理");//分类管理
+    private JButton xinBtn = new JButton("预算管理");//预算管理
 
     public AbstractMainFrame() {
         this.init();// 初始化操作
@@ -54,14 +55,17 @@ public abstract class AbstractMainFrame extends JFrame {
 
         ledgerBtn.setBounds(40, 20, 120, 50);
         sortBtn.setBounds(440, 20, 120, 50);
+        xinBtn.setBounds(230,20,120,50);
 
         Font font = new Font("华文彩云", Font.BOLD, 20);
 
         ledgerBtn.setFont(font);
         sortBtn.setFont(font);
+        xinBtn.setFont(font);
 
         btnPanel.add(ledgerBtn);
         btnPanel.add(sortBtn);
+        btnPanel.add(xinBtn);
     }
 
     // 添加监听器
@@ -76,8 +80,14 @@ public abstract class AbstractMainFrame extends JFrame {
                 sortMng();
             }
         });
+        xinBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                xinMng();
+            }
+        });
     }
 
     public abstract void ledgerMng();
     public abstract void sortMng();
+    public abstract void xinMng();
 }

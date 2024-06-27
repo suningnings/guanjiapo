@@ -8,18 +8,20 @@ public class Sort {
     private String sname;
     private String parent;
     private String sdesc;
+    private String xinzen;
 
     public Sort() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-    public Sort(int sid, String sname, String parent, String sdesc) {
+    public Sort (int sid, String sname, String parent, String sdesc,String xinzen) {
         super();
         this.sid = sid;
         this.sname = sname;
         this.parent = parent;
         this.sdesc = sdesc;
+        this.xinzen= xinzen;
     }
 
     public int getSid() {
@@ -29,6 +31,7 @@ public class Sort {
     public void setSid(int sid) {
         this.sid = sid;
     }
+
 
     public String getSname() {
         return sname;
@@ -54,9 +57,17 @@ public class Sort {
         this.sdesc = sdesc;
     }
 
+    public String getXinzen() {
+        return xinzen;
+    }
+
+    public void setXinjia(String xinzen) {
+        this.xinzen = xinzen;
+    }
+
     @Override
     public String toString() {
-        return "Sort [sid=" + sid + ", sname=" + sname + ", parent=" + parent + ", sdesc=" + sdesc + "]";
+       return "Sort [sid=" + sid + ", sname=" + sname + ", parent=" + parent + ", sdesc=" + sdesc + ", xinzen=" + xinzen +"]";
     }
 
 }

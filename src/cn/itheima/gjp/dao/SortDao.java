@@ -45,9 +45,9 @@ public class SortDao {
     public void updateSort(Sort sort) throws SQLException{
 
         // sql语句   根据 id进行数据的更新
-        String  sql = "update gjp_sort set sname= ? , parent= ? ,sdesc=? where sid = ?";
+        String  sql = "update gjp_sort set sname= ? , parent= ? ,sdesc=? ,xinzen=? where sid = ?";
 
-        Object[] params = {sort.getSname(),sort.getParent(),sort.getSdesc(),sort.getSid()};
+        Object[] params = {sort.getSname(),sort.getParent(),sort.getSdesc(),sort.getXinzen(),sort.getSid()};
 
         //执行
         qr.update(sql,params);
@@ -67,8 +67,8 @@ public class SortDao {
 //		QueryRunner qr = new QueryRunner(JDBCUtils.getDataSource());
 
         //2:执行sql
-        String sql = "insert into gjp_sort(sname,parent,sdesc) values(?,?,?)";
-        Object[] params = {sort.getSname(),sort.getParent(),sort.getSdesc()};
+        String sql = "insert into gjp_sort(sname,parent,sdesc,xinzen) values(?,?,?,?)";
+        Object[] params = {sort.getSname(),sort.getParent(),sort.getSdesc(),sort.getXinzen()};
 
 
         qr.update(sql, params);

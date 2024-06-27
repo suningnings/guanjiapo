@@ -25,7 +25,7 @@ public class LedgerService {
      * 查询所有账务信息的方法
      *   参数 无
      *   返回值 List<Ledger>  所有的封装好的  账务信息
-     * @throws SQLException
+     * //@throws SQLException
      */
     public List<Ledger> queryAllLedger() throws SQLException{
 
@@ -42,7 +42,7 @@ public class LedgerService {
      * 根据条件查询 符合条件的Ledger对象方法
      *    参数  四个条件参数
      *    返回值 List<Ledger>
-     * @throws SQLException
+     * //@throws SQLException
      */
     public List<Ledger> queryLedger(String beginTime,String endTime,String parent,String sname) throws SQLException{
 

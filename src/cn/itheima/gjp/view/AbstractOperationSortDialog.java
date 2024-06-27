@@ -20,6 +20,7 @@ public abstract class AbstractOperationSortDialog extends JDialog {
     protected JComboBox parentBox = new JComboBox(new DefaultComboBoxModel(new String[]{"=请选择=", "收入", "支出"}));//父分类
     protected JTextField snameTxt = new JTextField();//分类名称
     protected JTextArea sdescArea = new JTextArea();//说明文本域
+    protected JTextArea xinzenArea = new JTextArea();
     protected JLabel titleLabel = new JLabel("需要子类设置");
 
     private JButton cancelBtn = new JButton("取消");
@@ -38,7 +39,7 @@ public abstract class AbstractOperationSortDialog extends JDialog {
 
     private void init() {
         this.setResizable(false);
-        this.setSize(350, 320);
+        this.setSize(450, 520);
         this.setLayout(null);
         GUITools.center(this);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -75,12 +76,23 @@ public abstract class AbstractOperationSortDialog extends JDialog {
         this.add(sdescLabel);
         this.add(scrollPane);
 
+        // 新增内容
+        JLabel xinzenLabel =new JLabel("新增内容");
+        xinzenLabel.setBounds(30,250,60,28);
+        xinzenArea.setColumns(15);
+        xinzenArea.setRows(5);
+        JScrollPane xinscrollPane = new JScrollPane();
+        xinscrollPane.setBounds(100, 230, 200, 80);
+        xinscrollPane.setViewportView(xinzenArea);
+        this.add(xinzenLabel);
+        this.add(xinscrollPane);
+
         //取消按钮
-        cancelBtn.setBounds(80, 220, 90, 28);
+        cancelBtn.setBounds(80, 420, 90, 28);
         this.add(cancelBtn);
 
         //确定按钮
-        submitBtn.setBounds(210, 220, 90, 28);
+        submitBtn.setBounds(210, 420, 90, 28);
         this.add(submitBtn);
     }
 

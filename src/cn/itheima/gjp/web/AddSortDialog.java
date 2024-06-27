@@ -43,6 +43,7 @@ public class AddSortDialog extends AbstractOperationSortDialog {
         String sname = snameTxt.getText();
         //获取 分类描述
         String sdesc = sdescArea.getText();
+        String xinzen = xinzenArea.getText();
 
         //2:表单校验
         // String  中 有个 trim()方法   去除两端空格
@@ -62,6 +63,7 @@ public class AddSortDialog extends AbstractOperationSortDialog {
         sort.setParent(parent);
         sort.setSname(sname);
         sort.setSdesc(sdesc);
+        sort.setXinjia(xinzen);
 
         //4:调用 service中 addSort 完成添加
         SortService service = new SortService();

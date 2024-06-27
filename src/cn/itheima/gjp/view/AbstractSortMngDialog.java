@@ -80,19 +80,20 @@ public abstract class AbstractSortMngDialog extends JDialog {
         closeBtn.setBounds(570, 330, 80, 28);
         this.add(closeBtn);
     }
+//数据由Domain包来，通过DAO处理，传送给service，在service中调用set函数，实现数据的传送
 
     /**
      * 显示分类表格
      */
     protected void setTableModel(List<Sort> sortList) {
-        String[] colNames = new String[] {"ID", "分类名称", "父分类", "说明"};
-        String[] propNames = new String[] {"sid", "sname", "parent", "sdesc"};
+        String[] colNames = new String[] {"ID", "分类名称", "父分类", "说明", "新增"};
+        String[] propNames = new String[] {"sid", "sname", "parent", "sdesc","xinzen"};
         if(sortList == null || sortList.size() == 0) {
             sortDataTable.setModel(new DefaultTableModel(new Object[][] {
-                    {null, null, null, null}, {null, null, null, null},
-                    {null, null, null, null}, {null, null, null, null},
-                    {null, null, null, null}, {null, null, null, null},
-                    {null, null, null, null}, {null, null, null, null}
+                    {null, null, null, null, null}, {null, null, null, null, null},
+                    {null, null, null, null, null}, {null, null, null, null, null},
+                    {null, null, null, null, null}, {null, null, null, null, null},
+                    {null, null, null, null, null}, {null, null, null, null, null}
             },colNames));
             sortDataTable.setEnabled(false);
             return;

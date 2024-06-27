@@ -32,10 +32,12 @@ public class EditSortDialog extends AbstractOperationSortDialog {
         String parent = sort.getParent();//获取了要修改的父分类
         String sname = sort.getSname();//获取了要修改分类名称
         String sdesc = sort.getSdesc();//获取了要修改分类描述
+        String xinzen = sort.getXinzen();
 
         System.out.println(parent);
         System.out.println(sname);
         System.out.println(sdesc);
+        System.out.println(xinzen);
 
         // 将刚才获取的内容 显示到 这个编辑界面上
 //		表单上 父分类
@@ -48,6 +50,7 @@ public class EditSortDialog extends AbstractOperationSortDialog {
         sdescArea.setText(sdesc);
         snameTxt.setText(sname);
         parentBox.setSelectedItem(parent);
+        xinzenArea.setText(xinzen);
 
 
 
@@ -69,6 +72,7 @@ public class EditSortDialog extends AbstractOperationSortDialog {
         String sname = snameTxt.getText();
         String sdesc = sdescArea.getText();
         String parent = parentBox.getSelectedItem().toString();
+        String xinzen = xinzenArea.getText();
         /*
          *
          * 重点是  我要更新 被选中的那条记录 sort对象
@@ -87,6 +91,7 @@ public class EditSortDialog extends AbstractOperationSortDialog {
         sort.setParent(parent);
         sort.setSname(sname);
         sort.setSdesc(sdesc);
+        sort.setXinjia(xinzen);
 
 
         // 把这个对象传递给 service

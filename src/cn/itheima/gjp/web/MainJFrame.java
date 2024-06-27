@@ -27,5 +27,13 @@ public class MainJFrame extends AbstractMainFrame{
         // 从当前的界面弹出 分类管理对话框
 
     }
+    public void xinMng() {
+        // TODO Auto-generated method stub
+        System.out.println("预算管理");
+
+        new xinMngDialog(this).setVisible(true);
+        // 从当前的界面弹出 分类管理对话框
+
+    }
 
 }

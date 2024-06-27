@@ -33,7 +33,7 @@ public class SortMngDialog extends AbstractSortMngDialog{
     /**
      * 写一个 完成查询所有信息 并展示在 页面的方法
      *    queryAllSort()
-     * @throws SQLException
+     // @throws SQLException
      */
 
     public void queryAll() throws SQLException{

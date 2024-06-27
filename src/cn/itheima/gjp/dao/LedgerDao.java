@@ -60,7 +60,7 @@ public class LedgerDao {
     /**
      * 查询所有账务信息的方法 List<Ledger> 返回值的意思是 查询所有的账务信息 并且每一个封装成Ledger对象
      *
-     * @throws SQLException
+     // @throws SQLException
      *
      */
     public List<Ledger> queryAllLedger() throws SQLException {
@@ -161,7 +161,7 @@ public class LedgerDao {
      *
      * 小概念 集合转换成数组 toArray
      *
-     * @throws SQLException
+     // @throws SQLException
      */
     public List<Ledger> queryLedger(String beginTime, String endTime,
                                     String parent, String sname) throws SQLException {
@@ -228,7 +228,7 @@ public class LedgerDao {
     /**
      * 定义方法 编辑账务 传递Ledger 对象
      *
-     * @throws SQLException
+     // @throws SQLException
      */
     public void editLedger(Ledger ledger) throws SQLException {
 
