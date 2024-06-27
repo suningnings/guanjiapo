@@ -91,7 +91,7 @@ public class EditSortDialog extends AbstractOperationSortDialog {
         sort.setParent(parent);
         sort.setSname(sname);
         sort.setSdesc(sdesc);
-        sort.setXinjia(xinzen);
+        sort.setXinzen(xinzen);
 
 
         // 把这个对象传递给 service

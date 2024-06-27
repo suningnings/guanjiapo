@@ -32,7 +32,6 @@ public class Sort {
         this.sid = sid;
     }
 
-
     public String getSname() {
         return sname;
     }
@@ -61,7 +60,7 @@ public class Sort {
         return xinzen;
     }
 
-    public void setXinjia(String xinzen) {
+    public void setXinzen(String xinzen) {
         this.xinzen = xinzen;
     }
 

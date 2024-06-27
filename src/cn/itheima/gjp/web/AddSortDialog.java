@@ -63,7 +63,7 @@ public class AddSortDialog extends AbstractOperationSortDialog {
         sort.setParent(parent);
         sort.setSname(sname);
         sort.setSdesc(sdesc);
-        sort.setXinjia(xinzen);
+        sort.setXinzen(xinzen);
 
         //4:调用 service中 addSort 完成添加
         SortService service = new SortService();
